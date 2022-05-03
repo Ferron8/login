@@ -4,12 +4,13 @@ import SignUpScreen from './src/screens/SignUpScreen/SignUpScreen';
 import ConfirmEmailScreen from './src/screens/ConfirmEmailScreen';
 import ForgotPasswordScreen from './src/screens/ForgotPasswordScreen.js/ForgotPassword';
 import NewPasswordScreen from './src/screens/NewPasswordScreen';
+import Navigation from './components/navigation';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.root}>
     
-    <NewPasswordScreen/>
+    <Navigation/>
 
     </SafeAreaView>
   );

@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   View,
@@ -13,17 +14,14 @@ import SocialSignInButtons from "../../../components/CustomInput/SocialSignInBut
 const ConfirmEmailScreen = () => {
   const [code, setCode] = useState("");
 
+  const navigation = useNavigation();
 
   const onConfirmPressed = () => {
-    console.warn("onConfirmPressed");
+    navigation.navigate('Home');
   };
 
   const onSignInPressed = () => {
-    console.warn("OnSignInPressed");
-  };
-
-  const onTermsOfUsePressed = () => {
-    console.warn("onTermsOfUsePressed");
+    navigation.navigate('SignInScreen');
   };
 
   const onResendPressed = () => {

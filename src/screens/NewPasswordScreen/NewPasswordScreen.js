@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   View,
@@ -6,26 +7,26 @@ import {
   Text,
   
 } from "react-native";
-import NewPasswordScreen from ".";
+
 import CustomInput from "../../../components/CustomInput";
 import CustomButton from "../../../components/CustomInput/CustomButton";
 import SocialSignInButtons from "../../../components/CustomInput/SocialSignInButtons/SocialSignInButtons";
+
+
+const navigation = useNavigation();
 
 const NewPasswordScreen = () => {
   const [code, setCode] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
 
-  const onSendPressed = () => {
-    console.warn("onSendPressed");
-  };
 
   const onSubmitPressed = () => {
-    console.warn("OnSubmitPressed");
+    console.warn("onSubmitPressed")
   };
 
   const onSignInPressed = () => {
-    console.warn("onSignInPressed");
+    navigation.navigate('SignInScreen');
   };
 
 

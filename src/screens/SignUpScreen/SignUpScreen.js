@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   View,
@@ -10,6 +11,8 @@ import CustomInput from "../../../components/CustomInput";
 import CustomButton from "../../../components/CustomInput/CustomButton";
 import SocialSignInButtons from "../../../components/CustomInput/SocialSignInButtons/SocialSignInButtons";
 
+const navigation = useNavigation();
+
 const SignUpScreen = () => {
   const [Username, setUsername] = useState("");
   const [Password, setPassword] = useState("");
@@ -19,15 +22,15 @@ const SignUpScreen = () => {
   const { height } = useWindowDimensions();
 
   const onRegisterPressed = () => {
-    console.warn("onRegisterPressed");
+    navigation.navigate('ConfirmEmailScreen');
   };
 
   const onSignInPressed = () => {
-    console.warn("OnSignInPressed");
+    navigation.navigate('SignIn');
   };
 
   const onTermsOfUsePressed = () => {
-    console.warn("onTermsOfUsePressed");
+    console.warn("onTermsofUsePressed");
   };
 
   const onPrivacyPressed = () => {

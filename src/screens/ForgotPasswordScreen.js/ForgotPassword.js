@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
   View,
@@ -13,22 +14,18 @@ import SocialSignInButtons from "../../../components/CustomInput/SocialSignInBut
 const ForgotPasswordScreen = () => {
   const [username, setUsername] = useState("");
 
+  const navigation = useNavigation();
+
 
   const onSendPressed = () => {
-    console.warn("onSendPressed");
+    navigation.navigate('NewPasswordScreen');
   };
 
   const onSignInPressed = () => {
-    console.warn("OnSignInPressed");
+    navigation.navigate('SignInScreen');
   };
 
-  const onTermsOfUsePressed = () => {
-    console.warn("onTermsOfUsePressed");
-  };
 
-  const onResendPressed = () => {
-    console.warn("onResendPressed");
-  };
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
